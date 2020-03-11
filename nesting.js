@@ -44,13 +44,16 @@ var employees = [
 // Do not edit the code above.
 
 /*
-  Create a function called 'employeeUpdater' that takes no parameters. employeeUpdater will loop over the array above and perform the following:
+  Create a function called 'employeeUpdater' that takes no parameters. 
+  employeeUpdater will loop over the array above and perform the following:
     1. If employee's first name is Theo, remove that employee because he just got fired.
     2. If the employee's first name is Lorie, change her department to 'HR'.
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater() {
+
+}
 
 
 
@@ -157,6 +160,16 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+function looper(){
+  for(let i = 0; i < numsArr.length; i++){
+    for(let j = 0; j < numsArr[i].length; j++){
+      if(numsArr[i][j] % 2 === 0){
+        numsArr[i][j] = 'even'
+      } else if (numsArr[i][j] % 2 === 1){
+        numsArr[i][j] = 'odd'
+      }
+    }
+  }
+}
 
 
