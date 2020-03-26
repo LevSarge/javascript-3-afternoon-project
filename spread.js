@@ -42,11 +42,11 @@ and store the value to a variable named result */
 
 let numbers = [4, 6, 10];
 
-function addNums(num1, num2, num3) {
+let addNums = (num1, num2, num3) =>{
   return num1 + num2 + num3;
 }
 
-let result = addNums([...numbers])
+let result = addNums(...numbers)
 
 
 

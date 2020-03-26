@@ -21,7 +21,8 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-var {color, make, model, year} = carDetails
+const {color, make, model, year} = {color:'red', make:'toyota', model:'tacoma', year:1994}
+
 
 
 
@@ -67,31 +68,45 @@ function totalPopulation(obj) {
   The property values will be strings. 
   Use object destructuring to save the property values to new variables. 
   Push these new variables to an array and return the array. 
-*/
+*/let ingredients = (obj) => {
+  const {
+    carb,
+    fat,
+    protein
 
-function ingredients(obj) {
-  const {carb, fat, protein} = obj
-  const {}
+  } = obj
+
+  const arr = [carb, fat, protein]
+  return arr
 }
-
 
 
 ////////// PROBLEM 5 //////////
 
 /*
-  Now we will use object destructuring as the function's parameter instead of destructuring the object inside of the function declaration.
+  Now we will use object destructuring as the function's parameter instead of 
+  destructuring the object inside of the function declaration.
   Example:
     function example( {one, two, three} ) {
       return one + two + three
     }
 
-  Write a function called largeNumbers that will take a destructured object as it's parameter.
-  The object properties will be named first, second, and third and their values will be numbers.
+  Write a function called largeNumbers that will take a destructured object 
+  as it's parameter.
+  The object properties will be named first, second, and third and 
+  their values will be numbers.
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
-function largeNumbers()
+function largeNumbers( {first, second, third} ) {
+  if(first < second && first < third){
+    return first
+  }else if (second < first && second < third){
+    return second
+  }else {
+    return third
+  }
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -102,8 +117,17 @@ function largeNumbers()
   Find the longest array and return that array.
 */
 
-function numberGroups() {
-
+function numberGroups({a, b, c}){
+  let aLength = a.length
+  let bLength = b.length
+  let cLength = c.length
+  if(aLength > bLength && aLength > cLength){
+    return a
+  }else if (bLength > aLength && bLength > cLength){
+    return b
+  }else {
+    return c
+  }
 }
 
 
